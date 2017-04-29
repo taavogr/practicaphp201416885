@@ -21,9 +21,9 @@
   <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">App Conexion a Base de Datos con PHP</h1>
+        <h1 class="header center teal-text text-lighten-2">PRACTICA DE PHP</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Esta aplicacion en PHP es una demo de app con conexion a un servicio de BD usando Bluemix</h5>
+          
         </div>
 
         <br><br>
@@ -43,7 +43,7 @@
       <div class="row">
       <div class="col s12 center">
       
-      <h4>Lista de Empleados</h4>
+      <h4>Lista de Servicios</h4>
 
         
             <table class="centered striped">
@@ -58,16 +58,15 @@
   if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT * from empleados";
+  $sql = "SELECT * from servicios";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {?>
       <tr>
-      <td><?php echo $row['employee_id']?></td>
-      <td><?php echo $row['first_name']?></td>
-      <td><?php echo $row['last_name']?></td>
-      <td><?php echo $row['email']?></td>
+      <td><?php echo $row['nombre_servicio']?></td>
+      <td><?php echo $row['descripcion_servicio']?></td>
+      <td><?php echo $row['imagen_servicio']?></td>
       </tr>
      <?php }
   } else {
@@ -89,7 +88,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Gustavo Retamozo Falcon</h5>
+          
         </div>
       </div>
     </div>
