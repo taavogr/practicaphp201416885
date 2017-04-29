@@ -74,6 +74,9 @@
   $conn->close();
  ?> 
  </table>
+ <br> <br>
+ <img src="background2.jpg">
+ <br> <br>
 </div>
     </div>
 </div>
