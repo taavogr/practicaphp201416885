@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>PRACTICA PHP</title>
+  <title>Practica PHP</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,16 +13,17 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">PRACTICA 1</a>
-      
+
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  <div id="index-banner">
+  <div id="index-banner" class="parallax-container">
   <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <img src="background1.jpg">
-        
+        <h1 class="header center teal-text text-lighten-2">App Conexion a Base de Datos con PHP</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Esta aplicacion en PHP es una demo de app con conexion a un servicio de BD usando Bluemix</h5>
         </div>
 
         <br><br>
@@ -31,6 +32,7 @@
     </div>
 
   
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -41,11 +43,11 @@
       <div class="row">
       <div class="col s12 center">
       
-      <h4>Lista de servicios</h4>
+      <h4>Lista de Empleados</h4>
 
         
             <table class="centered striped">
-   <?php
+           <?php
   $servername = "us-cdbr-iron-east-03.cleardb.net";
   $username = "b74ba3320e82ec";
   $password = "2d194843";
@@ -56,16 +58,16 @@
   if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "SELECT * from servicios";
+  $sql = "SELECT * from empleados";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {?>
       <tr>
-      <td><?php echo $row['nombre_servicio']?></td>
-      <td><?php echo $row['descripcion_servicio']?></td>
-      <td><?php echo $row['imagen_servicio']?></td>
-      
+      <td><?php echo $row['employee_id']?></td>
+      <td><?php echo $row['first_name']?></td>
+      <td><?php echo $row['last_name']?></td>
+      <td><?php echo $row['email']?></td>
       </tr>
      <?php }
   } else {
@@ -73,36 +75,52 @@
   }
   $conn->close();
  ?> 
+      
  </table>
- <br> <br>
- <img src="background2.jpg">
- <br> <br>
 </div>
     </div>
 </div>
 
 
   </div>
-  
-  <div id="index-banner2">
-  <div class="section no-pad-bot">
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
-        <img src="background2.jpg">
-        
+        <div class="row center">
+          <h5 class="header col s12 light">Gustavo Retamozo Falcon</h5>
         </div>
-
-        <br><br>
-
       </div>
     </div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
 
-  
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>SOLUCIONES MOVILES Y CLOUD</h4>
+            
+        </div>
+      </div>
+
+    </div>
   </div>
 
 
-
-  
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
 
   <footer class="page-footer teal">
     <div class="container">
@@ -140,4 +158,6 @@
 
   </body>
 </html>
+
+
 
