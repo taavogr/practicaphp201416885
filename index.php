@@ -13,7 +13,7 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">BUTCHER & SONS</a>
+      <a id="logo-container" href="#" class="brand-logo">PRACTICA 1</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Menú 1</a></li>
         <li><a href="#">mENU 2</a></li>
@@ -55,7 +55,7 @@
       <div class="row">
       <div class="col s12 center">
       
-      <h4>Lista de Empleados</h4>
+      <h4>Lista de servicios</h4>
 
         
             <table class="centered striped">
@@ -76,10 +76,10 @@
       // output data of each row
       while($row = $result->fetch_assoc()) {?>
       <tr>
-      <td><?php echo $row['employee_id']?></td>
-      <td><?php echo $row['first_name']?></td>
-      <td><?php echo $row['last_name']?></td>
-      <td><?php echo $row['email']?></td>
+      <td><?php echo $row['nombre_servicio']?></td>
+      <td><?php echo $row['descripcion_servicio']?></td>
+      <td><?php echo $row['imagen_servicio']?></td>
+      
       </tr>
      <?php }
   } else {
