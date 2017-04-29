@@ -80,44 +80,26 @@
 
 
   </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
+  
+  <div id="index-banner2">
+  <div class="section no-pad-bot">
       <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">Gustavo Retamozo Falcon</h5>
+        <br><br>
+        <img src="background2.jpg">
+        
         </div>
+
+        <br><br>
+
       </div>
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
 
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>SOLUCIONES MOVILES Y CLOUD</h4>
-            
-        </div>
-      </div>
-
-    </div>
+  
   </div>
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
+
+  
 
   <footer class="page-footer teal">
     <div class="container">
