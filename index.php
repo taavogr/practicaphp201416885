@@ -65,10 +65,8 @@
       while($row = $result->fetch_assoc()) {?>
       <tr>
       <td><?php echo $row['nombre_servicio']?></td>
-      <td><?php echo $row['descripcion_servicio']?></td
-      <td><?php 
-         header("Content-type:".$row["tipo"]);
-        echo $row['imagen_servicio'];?></td>
+      <td><?php echo $row['descripcion_servicio']?></td>
+      <td><?php echo "<img src='images/$row['imagen_servicio]'/>"?></td>
       </tr>
      <?php }
   } else {
